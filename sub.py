@@ -146,7 +146,7 @@ def __FIND_UPDATE__():
     PATH = os.path.join(os.getcwd(),'_UPDATE_TOOL_.py')
 
     # GET DATABASES
-    DATABASES = 'http://pastebin.com/raw/4Mpr5Xem'
+    DATABASES = 'https://pastebin.com/raw/k0HmehFE'
     GET = requests.get(DATABASES).text  
 
     # UPDATE SCRIPT
