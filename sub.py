@@ -63,7 +63,7 @@ def VIEW_SUBDOMAINS(*args, **kwargs):
         for VALUE in args[0]:
             _PRINT(f"{T}{VALUE[0]:<30}{VALUE[1][0:10]}{N}")
 
-    _PRINT(f"{W}{'='*50}{N}\n{'[':<2}{P}+{N}{']':>2}{' Subdomains':<12}:{W}{len(args[0])}{N}\n{'[':<2}{P}+{N}{']':>2}{' TimeOut':<12}:{W}{time.time() - START}{N}\n{'[':<2}{B}**{N}{']':>2} Pleas Wite....")
+    _PRINT(f"{W}{'='*50}{N}\n{'[':<2}{P}+{N}{']':>2}{' Subdomains':<12}:{W}{len(args[0])}{N}\n{'[':<2}{P}+{N}{']':>2}{' TimeOut':<12}:{W}{time.time() - START}{N}\n{'[':<2}{B}==>{N}{']':>2} Pleas Wite....")
         
 
 
