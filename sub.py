@@ -254,8 +254,8 @@ class GOOGLE:
         self.dork = dork
     
     def get(self):
-        STYLES(self.dork.strip(), 10)
-        GET_URLS(self.dork.strip(), 10)
+        STYLES(self.dork.strip(), 500)
+        GET_URLS(self.dork.strip(), 500)
 
 
 # VALUS SYS ==> URL
