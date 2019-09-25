@@ -159,6 +159,8 @@ def PINDEX(*args, **kwargs):
 
         if '/search%3' in i[0] and i[1] == '':
             _PRINT(f"\n{'-'*50}\n[ {R}END{N} ]   Find {len(i[3]) - 1 } results \n{W}")
+            __FIND_UPDATE__()
+            exit()
            
         if '/url?q=' in i[0]:i[0] = i[0].split('/url?q=')[-1].split('&sa=')[0]
             
@@ -202,7 +204,6 @@ def GET_URLS(*args, **kwargs):
             PINDEX([URL,TITLE,ID, LIST])
 
         if len(LIST) >= int(args[1]):
-            PINDEX([URL,TITLE,ID, LIST])
             break
             
         NUM = len(LIST)  
@@ -291,6 +292,5 @@ def __SYS_ARGV__():
 
 if __name__ == '__main__':
     __SYS_ARGV__()
-    __FIND_UPDATE__()
                  
 # END !
