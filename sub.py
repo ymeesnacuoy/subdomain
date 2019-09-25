@@ -23,10 +23,10 @@ B = '\033[36m'
 START = time.time() 
 
 # [ URL ] GOOGLE
-Url_Google = "https://www.google.com"
+URL_GOOGLE = "https://www.google.com"
 
 # [ PAGE ] search IN GOOGLE 
-Path_search = "/search?q="
+PATH_SEARCH = "/search?q="
 
 # [ URL ] SUBDOMAIN SEARCH 
 API_URL = 'http://api.spyse.com/v1'
@@ -144,7 +144,7 @@ def GET_DATA(args, **kwargs):
     
     # [ GET ] THE DATA SOURSE
     try:
-        GET = SIS.get(f"{Url_Google}{Path_search}{Target}&start={Number}")
+        GET = SIS.get(f"{URL_GOOGLE}{PATH_SEARCH}{Target}&start={Number}")
     except:
         _PRINT(f"[{R}!!!{N}] Sorry No internet");exit()
     
@@ -160,12 +160,9 @@ def PINDEX(*args, **kwargs):
         if '/search%3' in i[0] and i[1] == '':
             _PRINT(f"\n{'-'*50}\n[ {R}END{N} ]   Find {len(i[3]) - 1 } results \n{W}")
            
-
         if '/url?q=' in i[0]:i[0] = i[0].split('/url?q=')[-1].split('&sa=')[0]
             
         # END THE [ results ] AND EXIT ! 
-        
-
         _PRINT(f"[ {T}ID{N}  ]   {i[2]}\n[ {T  if i[1] != '' else R }TIT{N} ]   {N}{i[1]}\n[ {T  if i[1] != '' else R}URL{N} ]   {N}{i[0]}\n{W}{'='*50}{N}")
         SAVE_URLS(i[0])
         
@@ -287,7 +284,7 @@ def __SYS_ARGV__():
         # RUN THE SCRIPT
         GET_DATA_TARGET(URL)
     
-    # NEW GET IN THE GOOGLE SEARCH FOR FIND ANY URL TO DORK
+    # NEW GET IN THE GOOGLE SEARCH FOR FIND ANY URL TO DORk
     root = GOOGLE(f"{URL_CLEAR(URL)}")
     root.get()
 
@@ -295,6 +292,5 @@ def __SYS_ARGV__():
 if __name__ == '__main__':
     __SYS_ARGV__()
     __FIND_UPDATE__()
-
-
+                 
 # END !
